@@ -4,5 +4,6 @@ class Artist
   def initialize(attributes)
     @artist_name = attributes.fetch(:artist_name, "Not Available")
     @ablum_name = attributes.fetch(:ablum_name, "Not Available")
+    @gene = attributes.fetch(:gene, "Not Available")
   end
 end
