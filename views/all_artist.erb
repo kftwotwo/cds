@@ -1,0 +1,7 @@
+<h2>Here are the artist you imputed in:</h2>
+
+<ul>
+  <% @artists.each() do |artist| %>
+  <li><a href="/artist/<%= artist.id() %>"> <%= artist.name() %> </a></li>
+  <% end %>
+</ul>

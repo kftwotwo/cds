@@ -9,10 +9,10 @@ get('/') do
   erb(:index)
 end
 
+get('/artist') do
+  @artists = Artist.all()
+  erb(:all_artist)
+end
 get('/artist/new') do
   erb(:artist_form)
-end
-
-post('/artist/new') do
-
 end
