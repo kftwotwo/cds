@@ -24,7 +24,7 @@ describe(Artist) do
 
   describe('.clear') do
     it "the array should be empty" do
-    test_artist = Artist.new(:artist_name => 'Kevin', :ablum => 'Kevin2', :gene => "Kevin3")
+    test_artist = Artist.new(:artist_name => 'Kevin')
     test_artist.save()
     expect(Artist.clear()).to(eq([]))
     end
@@ -32,7 +32,7 @@ describe(Artist) do
 
   describe('.all') do
     it "the array should have content" do
-    test_artist = Artist.new(:artist_name => 'Kevin', :ablum => 'Kevin2', :gene => "Kevin3")
+    test_artist = Artist.new(:artist_name => 'Kevin')
     test_artist.save()
     expect(Artist.all()).to(eq([test_artist]))
     end
