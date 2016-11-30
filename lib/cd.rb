@@ -8,10 +8,10 @@ class Cd
     @gene = attributes.fetch(:gene, "Not Available")
   end
 
-  # def save
-  #   @@details.push(self)
-  # end
-  #
+  def save
+    @@details.push(self)
+  end
+  # 
   # define_singleton_method(:all) do
   #   @@details
   # end

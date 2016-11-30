@@ -17,12 +17,12 @@ describe(Cd) do
   #   end
   # end
   #
-  # describe('#save') do
-  #   it "will save the ablum to an array" do
-  #   test_artist = Artist.new(:artist_name => 'Kevin', :songs => "Song1", :gene => "Rock")
-  #   expect(test_artist.save()).to(eq([test_artist]))
-  #   end
-  # end
+  describe('#save') do
+    it "will save the ablum to an array" do
+    test_artist = Cd.new(:artist_name => 'Kevin', :songs => "Song1", :gene => "Rock")
+    expect(test_artist.save()).to(eq([test_artist]))
+    end
+  end
 
   # describe('.clear') do
   #   it "empties the array" do
