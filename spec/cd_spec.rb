@@ -11,12 +11,12 @@ describe(Cd) do
     end
   end
 
-  # describe('.all') do
-  #   it "the array should be empty" do
-  #   expect(Artist.all()).to(eq([]))
-  #   end
-  # end
-  #
+  describe('.all') do
+    it "the array should be empty" do
+    expect(Cd.all()).to(eq([]))
+    end
+  end
+
   describe('#save') do
     it "will save the ablum to an array" do
     test_artist = Cd.new(:artist_name => 'Kevin', :songs => "Song1", :gene => "Rock")
