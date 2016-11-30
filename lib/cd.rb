@@ -6,9 +6,12 @@ class Cd
     @album_name = attributes.fetch(:album_name, "Not Available")
     @songs = attributes.fetch(:songs, "Not Available")
     @gene = attributes.fetch(:gene, "Not Available")
-    # @id = @@details.length.+(1)
+    @id = @@details.length.+(1)
   end
 
+  def id
+    @id
+  end
   def save
     @@details.push(self)
   end
@@ -21,13 +24,13 @@ class Cd
     @@details = []
   end
 
-  # define_singleton_method(:find) do |id|
-  #   found = nil
-  #   @@dealerships.each() do |dealership|
-  #     if dealership.id() == id
-  #       found = dealership
-  #     end
-  #   end
-  #   found
-  # end
+  define_singleton_method(:find) do |id|
+    found = nil
+    @@details.each() do |detail|
+      if detail.id() == id
+        found = detail
+      end
+    end
+    found
+  end
 end

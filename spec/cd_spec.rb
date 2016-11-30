@@ -4,7 +4,7 @@ require "rspec"
 describe(Cd) do
   describe('#initialize') do
     it('get info for cd') do
-      test_artist = Cd.new({:album_name => 'Kevin', :songs => "Song1", :gene => "Rock"})
+      test_artist = Cd.new(:album_name => 'Kevin', :songs => "Song1", :gene => "Rock")
       expect(test_artist.album_name()).to(eq("Kevin"))
       expect(test_artist.songs()).to(eq("Song1"))
       expect(test_artist.gene()).to(eq("Rock"))
@@ -35,6 +35,16 @@ describe(Cd) do
     test_artist = Cd.new(:artist_name => 'Kevin', :songs => "Song1", :gene => "Rock").save()
     Cd.clear()
     expect(Cd.all()).to(eq([]))
+    end
+  end
+
+  describe('.find') do
+    it ('will find artist by id') do
+      test_cd = Cd.new(:album_name => 'Kevin', :songs => "Song1", :gene => "Rock")
+      test_cd.save()
+      test_cd2 = Cd.new(:album_name => 'Kevin2', :songs => "Song2", :gene => "Rock2")
+      test_cd2.save()
+      expect(Cd.find(test_cd.id())).to(eq(test_cd))
     end
   end
 end
