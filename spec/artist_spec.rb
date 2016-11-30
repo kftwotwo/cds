@@ -11,16 +11,16 @@ describe(Artist) do
     end
   end
 
-  # describe('#save') do
-  #   it "it will save the ablum to an array" do
-  #   test_artist = Artist.new(:artist_name => 'Kevin', :ablum_name => "Computer", :gene => "Rock")
-  #   expect(test_artist.save()).to(eq(test_artist))
-  #   end
-  # end
-
   describe('.all') do
     it "the array should be empty" do
     expect(Artist.all()).to(eq([]))
+    end
+  end
+
+  describe('#save') do
+    it "it will save the ablum to an array" do
+    test_artist = Artist.new(:artist_name => 'Kevin', :ablum_name => "Computer", :gene => "Rock")
+    expect(test_artist.save()).to(eq([test_artist]))
     end
   end
 end

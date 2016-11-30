@@ -1,6 +1,6 @@
 class Artist
-  @@albums = []
   attr_reader(:artist_name, :ablum_name, :gene)
+  @@albums = []
 
   def initialize(attributes)
     @artist_name = attributes.fetch(:artist_name, "Not Available")
@@ -9,7 +9,7 @@ class Artist
   end
 
   def save
-    @@ablums.push(self)
+    @@albums.push(self)
   end
 
   define_singleton_method(:all) do
