@@ -15,4 +15,8 @@ class Artist
   define_singleton_method(:all) do
     @@albums
   end
+
+  define_singleton_method(:clear) do
+    @@albums =[]
+  end
 end
