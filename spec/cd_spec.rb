@@ -24,9 +24,9 @@ describe(Cd) do
     end
   end
 
-  # describe('.clear') do
-  #   it "empties the array" do
-  #     expect(Artist.clear()).to(eq([]))
-  #   end
-  # end
+  describe('.clear') do
+    it "empties the array" do
+      expect(Cd.clear()).to(eq([]))
+    end
+  end
 end

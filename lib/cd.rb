@@ -11,12 +11,12 @@ class Cd
   def save
     @@details.push(self)
   end
-  
+
   define_singleton_method(:all) do
     @@details
   end
 
-  # define_singleton_method(:clear) do
-  #   @@details = []
-  # end
+  define_singleton_method(:clear) do
+    @@details = []
+  end
 end
