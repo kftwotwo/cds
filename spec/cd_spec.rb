@@ -29,4 +29,12 @@ describe(Cd) do
       expect(Cd.clear()).to(eq([]))
     end
   end
+
+  describe('.all') do
+    it "the array should be empty with the .clear" do
+    test_artist = Cd.new(:artist_name => 'Kevin', :songs => "Song1", :gene => "Rock").save()
+    Cd.clear()
+    expect(Cd.all()).to(eq([]))
+    end
+  end
 end
