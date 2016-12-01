@@ -1,15 +1,21 @@
 class Artist
-  attr_reader(:artist_name, :id)
+  attr_reader(:artist_name, :id, :cd)
   @@artists = []
 
   def initialize(attributes)
     @artist_name = attributes.fetch(:artist_name, "Not Available")
     @id = @@artists.length.+(1)
+    @cd = []
+  end
+
+  def add_cd(album)
+    @cd.push(album)
   end
 
   def id
     @id
   end
+
   def save
     @@artists.push(self)
   end

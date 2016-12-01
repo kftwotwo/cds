@@ -12,6 +12,7 @@ class Cd
   def id
     @id
   end
+
   def save
     @@details.push(self)
   end

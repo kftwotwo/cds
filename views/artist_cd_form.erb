@@ -1,0 +1,16 @@
+<h1>Add a album to <%= @artists.artist_name() %> </h1>
+
+<form action="/cd" method="post">
+  <input id='cd_id' name='artist_id' type='hidden' value='<%= @artists.id() %>'>
+
+  <label for='album_name'>Artist's album name:</label>
+  <input id='album_name' name='album_name' type='text'>
+
+  <label for='gene'>Album's gene.:</label>
+  <input id='gene' name='gene' type='text'>
+
+  <label for='sogns'>Song:</label>
+  <input id='songs' name='songs' type='text'>
+
+  <button type="submit">Add</button>
+</form>
