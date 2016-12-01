@@ -1,8 +1,8 @@
 <h2>Here are all the albums:</h2>
 
 <ul>
-  <% @artists.cd().each() do |artist| %>
-    <li><a href="/artist/<%= artist.id() %>"><%= artist.artist_name() %> <%= artist.songs() %> <%= artist.gene() %></a></li>
+  <% @artists.cd().each() do |cds| %>
+    <li><a href="/cd/<%= cds.id() %>"><%= cds.album_name() %></a></li>
   <% end %>
 </ul>
 

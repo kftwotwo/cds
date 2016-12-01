@@ -9,6 +9,10 @@ get('/') do
   erb(:index)
 end
 
+get('/artist/new') do
+  erb(:artist_form)
+end
+
 get('/artist') do
   @artists = Artist.all()
   erb(:all_artist)
@@ -22,23 +26,19 @@ post('/artist') do
   erb(:success)
 end
 
-get('/artist/new') do
-  erb(:artist_form)
+get('/artist/:id') do
+  @artists = Artist.find(params.fetch('id').to_i())
+  erb(:artist)
 end
 
-get('/artist/:id') do
-  @artists = Cd.find(params.fetch('id').to_i())
-  erb(:album)
+get('/artist/:id/cd/new') do
+  @artists = Artist.find(params.fetch('id').to_i())
+  erb(:artist_cd_form)
 end
 
 get('/cd/:id') do
   @cd = Cd.find(params.fetch("id").to_i())
   erb(:album)
-end
-
-get('/artist/:id/cd/new') do
-    @artists = Artist.find(params.fetch('id').to_i())
-    erb(:artist_cd_form)
 end
 
 post('/cd') do
