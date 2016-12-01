@@ -11,6 +11,7 @@ describe(Artist) do
 
   describe('.all') do
     it "the array should shoud" do
+      Artist.clear()
     expect(Artist.all()).to(eq([]))
     end
   end
@@ -35,6 +36,7 @@ describe(Artist) do
     test_artist = Artist.new(:artist_name => 'Kevin')
     test_artist.save()
     expect(Artist.all()).to(eq([test_artist]))
+    Artist.clear()
     end
   end
 
